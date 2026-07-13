@@ -1,0 +1,65 @@
+VOICE AGENT - SETUP ON A NEW PC
+================================
+
+This folder is portable, but a few things must be installed on each
+Windows PC before it works (this is normal for any software).
+
+STEP 1 - Copy this whole "python-ai" folder to the new PC.
+
+STEP 2 - Install these (one-time, per PC):
+
+  1. Python (3.10 or newer)
+     https://www.python.org/downloads/
+     During install, tick "Add Python to PATH".
+
+  2. Ollama (runs the free local AI brain)
+     https://ollama.com/download
+     After installing, open Command Prompt and run:
+         ollama pull llama3.2
+
+  3. Local WP (free local WordPress hosting) - only needed if you plan
+     to build WordPress sites:
+     https://localwp.com/
+
+STEP 3 - Run the auto-setup script:
+  Double-click "install_on_new_pc.bat" inside this folder.
+  It will automatically:
+    - create the Python virtual environment (venv)
+    - install all required Python packages
+  (Python and Ollama themselves must already be installed - see Step 2 -
+  the script cannot install those two for you.)
+
+STEP 4 - Double-click "Jarvis.bat" on the Desktop (or create a
+  shortcut to it on the new PC's Desktop) to start the agent.
+  The first time it runs, it will ask you to paste your Figma token
+  and file key - it remembers them after that.
+
+That's it. Everything else (the AI logic, Figma reading, site
+generation for WordPress/Shopify/HTML) is already inside this folder
+and needs no further setup.
+
+
+WHERE TO GET YOUR FIGMA TOKEN AND FILE KEY
+===========================================
+
+FIGMA TOKEN (proves it's you, lets the agent read your files):
+  1. Go to figma.com and log in.
+  2. Click your profile icon (top left) -> Settings.
+  3. Go to the "Security" tab.
+  4. Scroll to "Personal access tokens" -> click "Generate new token".
+  5. Give it any name, click Generate, then COPY the token immediately
+     (Figma only shows it once - if you lose it, just generate a new one).
+  6. Paste this into the "Figma token" box in the Jarvis app.
+
+FIGMA FILE KEY (tells the agent which design file to read):
+  1. Open your design in Figma in the browser.
+  2. Look at the URL, it looks like:
+       figma.com/design/ABC123XYZ456/My-Cool-Website
+                         ^^^^^^^^^^^^
+  3. The file key is that code right after "/design/" (or "/file/" on
+     older links) and before the next "/". In the example above it's
+       ABC123XYZ456
+  4. Paste this into the "Figma file key" box in the Jarvis app.
+
+You only need to do this once per design. If you switch to a
+different Figma file later, just paste the new file key and hit Save.

@@ -1,0 +1,11 @@
+openai-whisper
+pyttsx3
+sounddevice
+numpy
+requests
+yt-dlp
+openpyxl
+python-docx
+python-pptx
+Pillow
+pywebview

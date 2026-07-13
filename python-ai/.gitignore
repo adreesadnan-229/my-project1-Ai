@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+config.json
+voice_agent/generated_sites/*
+!voice_agent/generated_sites/.gitkeep
